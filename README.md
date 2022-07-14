@@ -1,4 +1,4 @@
-# ✏️ Etch-a-SKetch
+# ✏️ Etch-a-Sketch
 
 A basic Etch-a-Sketch Project where users can sketch using colors. Users can also choose other modes for writing.
 
