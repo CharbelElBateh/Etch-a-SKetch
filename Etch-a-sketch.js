@@ -1,6 +1,7 @@
 const grid = document.querySelector('grid')
 const colorPicker = document.getElementById('colorPicker')
 const width = grid.offsetWidth;
+var color = "#000000"
 let size = 20;
 
 for (let i = 0; i < size * size; i++) {
@@ -11,4 +12,22 @@ for (let i = 0; i < size * size; i++) {
     grid.appendChild(gridElement)
 }
 
-colorPicker.oninput = (e) => setCurrentColor(e.target.value)
+const setColor = (input)=>{
+    color = input;
+}
+
+colorPicker.addEventListener("input", ()=>{
+    setColor(colorPicker.value)
+})
+
+const gridElement = document.querySelectorAll('div');
+
+gridElement.forEach(element => {
+    element.addEventListener('mousedown', () => {
+        gridElement.forEach(box => {
+            box.addEventListener('mouseover', ()=>{
+                    box.style.backgroundColor = color;
+            },false)
+        })
+    })
+})

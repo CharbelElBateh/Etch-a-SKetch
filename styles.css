@@ -12,6 +12,7 @@ header{
     font-size: 28px;
     padding-top: calc(10px + 2.5%);
     padding-bottom: calc(10px + 2.5%);
+    margin: -10px -10px 0 -10px;
 }
 grid {
     display: grid;
@@ -23,7 +24,7 @@ grid {
 }
   
 .grid-element {
-    user-select: none;
+  user-select: none;
 }
 
 panel{
@@ -31,6 +32,7 @@ panel{
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 button,
@@ -55,3 +57,12 @@ input[type='color'] {
   border: none;
 }
 
+settings{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 7.5%;
+}
+
+#colorPicker{
+  grid-column: 2;
+}
