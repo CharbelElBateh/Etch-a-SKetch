@@ -1,5 +1,7 @@
+<!----------Project Etch-A-Sketch---------->
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>Etch-a-Sketch</title>
         <meta charset="UTF-8">
@@ -7,14 +9,50 @@
         <link rel="stylesheet" href="styles.css">
         <script src="Etch-a-sketch.js" defer></script>
     </head>
+
     <body>
+
         <header>Etch-a-sketch</header>
+
         <panel>
+
+            <!-- Canvas -->
             <grid>
             </grid>
+
+            <!-- Modes and Color Picker-->
             <settings>
-                <input id="colorPicker" type="color" value="#333333" />
+                <div class="settings">
+                    
+                    <!-- Color Picker -->
+                    <input id="colorPicker" type="color" value="#333333" />
+
+                    <!-- Canvas Size --->
+                    <input type="range" min ="10" max="64" value = "10" class="slider">
+
+                    <!-- Mode Buttons -->
+                    <button class="clear">Clear Grid</button>
+                    <button class="color">Color Mode</button>
+                    <button class="rainbow">Rainbow Mode</button>
+                    <button class="eraser">Eraser</button>
+
+                </div>
             </settings>
+
         </panel>
+
+        <footer>
+
+            <p>
+            Copyright ©
+            <script>
+              document.write(new Date().getFullYear())
+            </script>
+                <a href="https://github.com/CharbelElBateh" target="_blank">CharbelElBateh</a>
+            </p>
+
+        </footer>
+
     </body>
+
 </html>
